@@ -4,10 +4,10 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/bookworm64"
-  config.vm.provision "shell", inline: <<-script
-      apt update
-      apt upgrade -y
-    script
+  # config.vm.provision "shell", inline: <<-script
+  #   dhclient eth1 -r
+  #   dhclient eth1 
+  # script
   #server
   config.vm.define "server" do |dhcp|
     dhcp.vm.network  "private_network",
@@ -17,15 +17,26 @@ Vagrant.configure("2") do |config|
       virtualbox__intnet: true
     #ojo al poner las rutas de la compartida, siempre /vagrant delante o no funciona
     dhcp.vm.provision "shell", inline: <<-script
+      apt update
+      apt upgrade -y
       apt install isc-dhcp-server -y
       cp -v /vagrant/shared/dhcp_settings/isc-dhcp-server /etc/default/ 
       cp -v /vagrant/shared/dhcp_settings/dhcpd.conf  /etc/dhcp/
+      systemctl start isc-dhcp-server
       script
   end
-  #client
-  config.vm.define "client" do |cl|
-    cl.vm.network  "private_network",
+
+  #client1
+  config.vm.define "client1" do |cl1|
+    cl1.vm.network  "private_network",
       type: "dhcp",
+      virtualbox__intnet: true
+  end
+  #client2
+  config.vm.define "client2" do |cl2|
+    cl2.vm.network  "private_network",
+      type: "dhcp",
+      mac: "08002722edc6",
       virtualbox__intnet: true
   end
 end
