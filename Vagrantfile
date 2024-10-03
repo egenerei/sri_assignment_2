@@ -4,10 +4,6 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/bookworm64"
-  # config.vm.provision "shell", inline: <<-script
-  #   dhclient eth1 -r
-  #   dhclient eth1 
-  # script
   #server
   config.vm.define "server" do |dhcp|
     dhcp.vm.network  "private_network",
