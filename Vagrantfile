@@ -13,14 +13,12 @@ Vagrant.configure("2") do |config|
       virtualbox__intnet: true
     #ojo al poner las rutas de la compartida, siempre /vagrant delante o no funciona
     dhcp.vm.provision "shell", inline: <<-script
-      apt update
-      apt upgrade -y
-      apt install isc-dhcp-server -y
+      apt-get update
+      apt-get upgrade -y
+      apt-get install isc-dhcp-server -y
       cp -v /vagrant/shared/dhcp_settings/isc-dhcp-server /etc/default/ 
-      cp -v /vagrant/shared/dhcp_settings/dhcpd.conf  /etc/dhcp/
-      systemctl enable isc-dhcp-server
-      systemctl stop isc-dhcp-server
-      systemctl start isc-dhcp-server
+      cp -v /vagrant/shared/dhcp_settings/dhcpd.conf /etc/dhcp/
+      systemctl restart isc-dhcp-server
       script
   end
 
