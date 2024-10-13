@@ -1,4 +1,4 @@
-# DHCP Practice - Práctica A
+# DHCP Server Practice using Vagrant 
 
 ## Overview
 
@@ -29,10 +29,10 @@ The main goal of this exercise is to configure a DHCP server on a Linux machine 
 
 ### 2. Client Configuration
 
-- **Client 1 (c1)**:
+- **Client 1 (client1)**:
   - Configured to dynamically obtain an IP address from the DHCP server.
   
-- **Client 2 (c2)**:
+- **Client 2 (client2)**:
   - Configured to always obtain a static IP (`192.168.57.4`) based on its MAC address.
   - Lease Time: 1 hour
   - DNS Server: `1.1.1.1`
