@@ -13,7 +13,7 @@ The main goal of this exercise is to configure a DHCP server on a Linux machine 
 
 ### 1. DHCP Server Configuration
 
-- **Operating System**: Linux (Virtual Machine)
+- **Operating System**: Linux (Virtual Machine) debian bookworm64 based
 - **Network Interfaces**:
   - Interface 1: Private host-only network `192.168.56.0/24` with IP `192.168.56.10`.
   - Interface 2: Internal network `192.168.57.0/24` with IP `192.168.57.10`.
