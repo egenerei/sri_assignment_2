@@ -1,4 +1,3 @@
-```markdown
 # DHCP Practice - Práctica A
 
 ## Overview
@@ -66,8 +65,3 @@ The main goal of this exercise is to configure a DHCP server on a Linux machine 
 ## Conclusion
 
 This practice demonstrates how to configure a Linux DHCP server and ensure clients receive dynamic or static IP configurations. By following this setup, you can gain a deeper understanding of how DHCP works in a network environment.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
