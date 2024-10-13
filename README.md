@@ -1,5 +1,3 @@
-Here is a sample `README.md` for your GitHub repository based on the DHCP practice exercise:
-
 ```markdown
 # DHCP Practice - Práctica A
 
@@ -73,5 +71,3 @@ This practice demonstrates how to configure a Linux DHCP server and ensure clien
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
-
-Feel free to customize it further based on any additional details you want to include!
