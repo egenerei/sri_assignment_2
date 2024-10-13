@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a DHCP practice setup where a DHCP server and two clients (c1 and c2) are configured. The practice involves setting up a Linux-based DHCP server and verifying client configurations, including assigning dynamic and static IP addresses based on the client's MAC address.
+This repository contains a DHCP practice setup where a DHCP server and two clients (client1 and client2) are configured. The practice involves setting up a Linux-based DHCP server and verifying client configurations, including assigning dynamic and static IP addresses based on the client's MAC address.
 
 ## Objective
 
